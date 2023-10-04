@@ -2,7 +2,7 @@ package main
 
 import "testing"
 
-func Testadder(t *testing.T) {
+func TestAdder(t *testing.T) {
 
 	got := adder(4, 6)
 	want := 10
