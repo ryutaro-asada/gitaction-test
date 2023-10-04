@@ -1,18 +1,16 @@
 name: Rspec for Rails with PostgreSQL
 on: push
 jobs:
-  # Label of the container job
   rspec:
-    # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
-    services: # サービスコンテナの定義
+    services:
       postgres:
         image: postgres:15.0-alpine3.16
         ports:
-            - 5432:5432
+          - 5432:5432
         env:
           POSTGRES_PASSWORD: postgres
-        options: >- # 起動後のヘルスチェック
+        options: >-
           --health-cmd pg_isready
           --health-interval 10s
           --health-timeout 5s
@@ -20,18 +18,14 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - actions/setup-ruby@v1
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
         with:
-            ruby-version: 3.1
-      - name: Rspec
-        env: 
-          # テスト対象の Rails アプリケーションは次の環境変数で DB 接続先を設定できる想定
-          - DB_HOST: localhost
-          - DB_PORT: 5432
+          ruby-version: 3.1
+      - name: Bundle install and RSpec
         run: |
-            bundle install
-            bundle install --jobs 4 --retry 3
-            bundle exec rails db:create
-            bundle exec rails db:migrate
-            bundle exec rspec
+          bundle install
+          bundle exec rails db:create
+          bundle exec rails db:migrate
+          bundle exec rspec
 
