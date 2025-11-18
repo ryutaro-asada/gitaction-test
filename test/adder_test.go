@@ -5,34 +5,39 @@ import "testing"
 func TestAdder(t *testing.T) {
 
 	got := adder(4, 6)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
 	want := 10
 
 	if got != want {
 		t.Errorf("got %q, wanted %q", got, want)
-
-
-		k
+	bbbbbbbbbbb
+	bbbbbbbbbbb
+	bbbbbbbbbbb
 	}
 }
