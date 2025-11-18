@@ -31,5 +31,8 @@ func TestAdder(t *testing.T) {
 
 	if got != want {
 		t.Errorf("got %q, wanted %q", got, want)
+
+
+		k
 	}
 }
